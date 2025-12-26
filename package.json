@@ -1,0 +1,65 @@
+{
+  "name": "screeps-typescript-starter",
+  "version": "3.0.0",
+  "description": "",
+  "main": "index.js",
+  "//": "If you add or change the names of destinations in screeps.json, make sure you update these scripts to reflect the changes",
+  "scripts": {
+    "lint": "eslint \"src/**/*.ts\"",
+    "lint:fix": "eslint \"src/**/*.ts\" --fix",
+    "format": "prettier --write \"src/**/*.ts\"",
+    "build": "rollup -c",
+    "postbuild": "pnpm run lint",
+    "push-main": "rollup -c --environment DEST:main",
+    "prepush-main": "pnpm run lint",
+    "push-pserver": "rollup -c --environment DEST:pserver",
+    "push-season": "rollup -c --environment DEST:season",
+    "push-sim": "rollup -c --environment DEST:sim",
+    "test": "npm run test-unit",
+    "test-unit": "mocha test/unit/**/*.ts",
+    "test-integration": "echo 'See docs/in-depth/testing.md for instructions on enabling integration tests'",
+    "watch-main": "rollup -cw --environment DEST:main",
+    "watch-pserver": "rollup -cw --environment DEST:pserver",
+    "watch-season": "rollup -cw --environment DEST:season",
+    "watch-sim": "rollup -cw --environment DEST:sim"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/screepers/screeps-typescript-starter.git"
+  },
+  "author": "",
+  "license": "Unlicense",
+  "bugs": {
+    "url": "https://github.com/screepers/screeps-typescript-starter/issues"
+  },
+  "homepage": "https://github.com/screepers/screeps-typescript-starter#readme",
+  "devDependencies": {
+    "@eslint/js": "^9.39.2",
+    "@rollup/plugin-commonjs": "^29.0.0",
+    "@rollup/plugin-node-resolve": "^16.0.3",
+    "@types/chai": "^5.2.3",
+    "@types/lodash": "4.17.21",
+    "@types/node": "^25.0.3",
+    "@types/screeps": "^3.2.3",
+    "@typescript-eslint/eslint-plugin": "^8.50.0",
+    "@typescript-eslint/parser": "^8.50.0",
+    "eslint": "^9.39.2",
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-import-resolver-typescript": "^4.4.4",
+    "eslint-plugin-import": "^2.24.0",
+    "eslint-plugin-simple-import-sort": "^12.1.1",
+    "lodash": "^4.17.21",
+    "prettier": "^3.7.4",
+    "rollup": "^4.54.0",
+    "rollup-plugin-clear": "^2.0.7",
+    "rollup-plugin-screeps": "^1.0.1",
+    "rollup-plugin-typescript2": "^0.36.0",
+    "ts-node": "^10.2.0",
+    "tsconfig-paths": "^4.2.0",
+    "typescript": "^5.9.3",
+    "typescript-eslint": "^8.50.1"
+  },
+  "dependencies": {
+    "source-map": "~0.7.6"
+  }
+}
