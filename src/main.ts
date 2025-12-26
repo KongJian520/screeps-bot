@@ -1,5 +1,10 @@
+
 import { ErrorMapper } from "utils/ErrorMapper";
+import "./interfaces/creep";
+import { createApp } from "framework";
 
-export const loop = ErrorMapper.wrapLoop(() => {
 
-});
+const app = createApp({ roomRunner, creepRunner });
+
+
+export const loop = app.run;

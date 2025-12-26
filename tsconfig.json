@@ -5,7 +5,7 @@
       "es2018"
     ],
     "target": "es2018",
-
+    "allowUmdGlobalAccess": true,
     "moduleResolution": "Node",
     "outDir": "dist",
     "baseUrl": "src/",
@@ -14,7 +14,12 @@
     "experimentalDecorators": true,
     "noImplicitReturns": true,
     "allowSyntheticDefaultImports": true,
-    "allowUnreachableCode": false
+    "allowUnreachableCode": false,
+    "paths": {
+      "@/*": [
+        "./src/*"
+      ]
+    }
   },
   "exclude": [
     "node_modules"
